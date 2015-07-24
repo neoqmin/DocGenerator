@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= title %></title>
+</head>
+<body>
+<h1><%= title %></h1>
+    <p>Welcome to <%= name %></p>
+	<form name="memo" method="post" action="/insert">
+		name <input type="text" name="username" />
+		<br />
+		message <input type="text" name="memo" />
+		<button type="submit" >Submit</button>
+	</form>
+</body>
+</html>

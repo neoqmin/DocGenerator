@@ -1,0 +1,18 @@
+{
+    "name":  "DocGenerator",
+    "description":  "To generate documents",
+    "keywords":  [
+        "auto-generating",
+        "documents"
+    ],
+    "author": {
+        "name": "Kevin Hwang",
+        "email": "neoqmin@gmail.com"
+    },
+    "dependencies": {
+        "express": "~4.2.0",
+        "mongoose": "~4.0.8",
+        "ejs": "*",
+        "body-Parser": "*"
+    }
+}
