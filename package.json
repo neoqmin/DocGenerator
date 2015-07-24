@@ -9,6 +9,9 @@
         "name": "Kevin Hwang",
         "email": "neoqmin@gmail.com"
     },
+    "scripts": {
+    "start": "node ./bin/www"
+    },
     "dependencies": {
         "express": "~4.2.0",
         "mongoose": "~4.0.8",
