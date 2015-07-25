@@ -1,25 +1,6 @@
 {
     "name":  "DocGenerator",
     "description":  "To generate documents",
-    "keywords":  [
-        "auto-generating",
-        "documents"
-    ],
-    "author": {
-        "name": "Kevin Hwang",
-        "email": "neoqmin@gmail.com"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/neoqmin/DocGenerator.git"
-    },
-    "scripts": {
-        "start": "node ./bin/www"
-    },
-    "engines": {
-        "node": "0.8.x",
-        "npm": "1.1.x"
-    },
     "dependencies": {
         "express": "~4.2.0",
         "body-Parser": "~1.0.0"
