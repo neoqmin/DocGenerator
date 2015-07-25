@@ -1,44 +1,44 @@
 var express = require('express');
 //var http = require('http');
 var path = require('path');
-// express 4.xºÎÅÍ´Â ³»ºÎÀÇ body parser ±â´ÉÀÌ ºüÁ®ÀÖÀ¸¹Ç·Î ¾Æ·¡¿Í °°ÀÌ body-parser¸¦ Ãß°¡ÇØÁà¾ßÇÑ´Ù.(npm ¼³Ä¡µµ ÇØ¾ßÇÔ)
+// express 4.xë¶€í„°ëŠ” ë‚´ë¶€ì˜ body parser ê¸°ëŠ¥ì´ ë¹ ì ¸ìˆìœ¼ë¯€ë¡œ ì•„ë˜ì™€ ê°™ì´ body-parserë¥¼ ì¶”ê°€í•´ì¤˜ì•¼í•œë‹¤.(npm ì„¤ì¹˜ë„ í•´ì•¼í•¨)
 var bodyParser = require('body-parser');
 
-// mongo dbÀÇ µ¥¸óÀÎ mongod¸¦ ½ÇÇàÇØ¾ßÇÑ´Ù.
-var mongoose = require('mongoose');
+// mongo dbì˜ ë°ëª¬ì¸ mongodë¥¼ ì‹¤í–‰í•´ì•¼í•œë‹¤.
+//var mongoose = require('mongoose');
 
-// mongoose¸¦ »ç¿ëÇÏ´Â ÀÌÀ¯´Â ½ºÅ°¸¶¸¦ »ç¿ëÇÏ±â À§ÇÔÀÌ´Ù.
-var MemoSchema = mongoose.Schema({ username: String, memo: String });
+// mongooseë¥¼ ì‚¬ìš©í•˜ëŠ” ì´ìœ ëŠ” ìŠ¤í‚¤ë§ˆë¥¼ ì‚¬ìš©í•˜ê¸° ìœ„í•¨ì´ë‹¤.
+//var MemoSchema = mongoose.Schema({ username: String, memo: String });
 
-var Memo = mongoose.model('MemoModel', MemoSchema);
+//var Memo = mongoose.model('MemoModel', MemoSchema);
 
 var app = express();
 
-mongoose.connect('mongodb://localhost/keveindb', function (err) {
+/*mongoose.connect('mongodb://localhost/keveindb', function (err) {
     if (err) {
         console.log('mongoose connection error :' + err);
         throw err;
     }
 });
-
-// ejsÀÇ ¼³Á¤À» ÇÑ´Ù.
+*/
+// ejsì˜ ì„¤ì •ì„ í•œë‹¤.
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-// ½ÇÁ¦·Î body ÆÄ½ÌÀ» ÇÏ±â À§ÇØ ¾Æ·¡ÀÇ ÄÚµå¸¦ Ãß°¡ÇØ¾ßÇÑ´Ù.
+// ì‹¤ì œë¡œ body íŒŒì‹±ì„ í•˜ê¸° ìœ„í•´ ì•„ë˜ì˜ ì½”ë“œë¥¼ ì¶”ê°€í•´ì•¼í•œë‹¤.
 app.use(bodyParser.urlencoded({ extended: false }));
 
 
 
 app.post('/insert', function (req, res) {
-    var memo = new Memo({ username: req.body.username, memo: req.body.memo});
+ /*   var memo = new Memo({ username: req.body.username, memo: req.body.memo});
     memo.save(function (err, silence) {
         if (err) {
             console.error(err);
             throw err;
         }
         res.send('success');
-    });
+    });*/
 });
 
 app.get('/', function (req, res, err) {    
