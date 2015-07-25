@@ -1,8 +1,11 @@
 {
-    "name":  "DocGenerator",
-    "description":  "To generate documents",
-    "dependencies": {
-        "express": "~4.2.0",
-        "body-Parser": "~1.0.0"
-    }
+  "name": "node-example",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "2.5.x"
+  },
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.1.x"
+  }
 }
