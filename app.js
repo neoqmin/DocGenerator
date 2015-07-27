@@ -46,4 +46,6 @@ app.get('/', function (req, res, err) {
    res.render('index', { title: 'Express', name: 'Kevin'});
  });
 
-module.export=app;
+var server = app.listen(3000, function() {
+	console.log('listen on 3000')
+});
