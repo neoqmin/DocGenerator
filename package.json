@@ -4,7 +4,7 @@
   "dependencies": {
     "express": "2.5.x"
   },
-  "script": {
+  "scripts": {
     "start": "node ./bin/www"
   }
   "engines": {
