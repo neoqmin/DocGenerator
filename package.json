@@ -4,6 +4,9 @@
   "dependencies": {
     "express": "2.5.x"
   },
+  "script": {
+    "start": "node ./bin/www"
+  }
   "engines": {
     "node": "0.8.x",
     "npm": "1.1.x"
