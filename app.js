@@ -5,22 +5,22 @@ var path = require('path');
 var bodyParser = require('body-parser');
 
 // mongo db의 데몬인 mongod를 실행해야한다.
-var mongoose = require('mongoose');
+//var mongoose = require('mongoose');
 
 // mongoose를 사용하는 이유는 스키마를 사용하기 위함이다.
-var MemoSchema = mongoose.Schema({ username: String, memo: String });
+//var MemoSchema = mongoose.Schema({ username: String, memo: String });
 
-var Memo = mongoose.model('MemoModel', MemoSchema);
+//var Memo = mongoose.model('MemoModel', MemoSchema);
 
 var app = express();
-
+/*
 mongoose.connect('mongodb://localhost/keveindb', function (err) {
     if (err) {
         console.log('mongoose connection error :' + err);
         throw err;
     }
 });
-
+*/
 // ejs의 설정을 한다.
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -31,14 +31,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 
 app.post('/insert', function (req, res) {
-    var memo = new Memo({ username: req.body.username, memo: req.body.memo});
-    memo.save(function (err, silence) {
+//    var memo = new Memo({ username: req.body.username, memo: req.body.memo});
+/*    memo.save(function (err, silence) {
         if (err) {
             console.error(err);
             throw err;
         }
         res.send('success');
     });
+    */
 });
 
 app.get('/', function (req, res, err) {    
