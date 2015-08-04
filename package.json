@@ -13,6 +13,6 @@
         "express": "~4.2.0",
         "mongoose": "~4.0.8",
         "ejs": "*",
-        "body-Parser": "*"
+        "body-parser": "*"
     }
 }
